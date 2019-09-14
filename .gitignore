@@ -5,6 +5,7 @@ myvenv
 db.sqlite3
 /static
 .DS_Store
+.env*
 
 
 ## Ignore Visual Studio temporary files, build results, and
