@@ -1,29 +1,19 @@
 version: '3'
 
 services:
+  db:
+    image: postgres
+    # restart: always
+    # env_file: .env-db
+    ports:
+      - "5432:5432"
   web:
     build: .
     command: python manage.py runserver 0.0.0.0:8001
     # volumes:
-    #   - .:/code/
+    #   - .:/code
     ports:
       - "8001:8001"
     # env_file: .env
-    # depends_on:
-    #   - db
-
-  
-#   db:
-#     image: postgres
-#     restart: always
-#     volumes:
-#       - postgres_data:/var/lib/postgresql/data/
-#     env_file: .env-db
-#     ports:
-#       - 5432:5432
-
-  
-
-
-# volumes:
-#   postgres_data:
+    depends_on:
+      - db
