@@ -1,7 +1,5 @@
 FROM python:3.8.0b4-alpine
 
-MAINTAINER Phansiri
-
 ENV PYTHONUNBUFFERED 1
 
 RUN apk update && \
