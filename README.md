@@ -106,3 +106,6 @@ docker-compose down
 ```
 
 Good luck!
+
+## Next
+Connect it to Gitlab! - coming soon...
